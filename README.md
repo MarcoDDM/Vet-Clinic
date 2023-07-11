@@ -1,37 +1,11 @@
-## Getting Started
-
-This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
+<div align="center">
 
-Modify this file to match your project and remove sections that don't apply.
+  <img src="soyMarco.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-
-<!-- TABLE OF CONTENTS -->
+</div>
 
 # 📗 Table of Contents
 
@@ -52,7 +26,6 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -60,13 +33,15 @@ After you're finished please remove all the comments and instructions!
 # 📖 Vet Clinic <a name="about-project"></a>
 
 
-**Vet Clinic** is a project to learn about databases and apply it on a real case.
+This repository contains plain SQL files that were used to set up and manage a database. The following files are included:
+
+- schema.sql: This file contains the SQL commands used to create all the necessary tables in the database.
+- data.sql: This file contains the SQL commands used to populate the tables with sample data.
+- queries.sql: This file contains examples of queries that can be run on the database. Please note that this file may contain queries that modify the database, such as deleting records. Use these queries responsibly!
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -95,9 +70,7 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Description: This update ensures that data is correctly stored in the database and can be interacted with using SQL commands. With this implementation, users can confidently manage and manipulate their data using standard SQL syntax.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,17 +78,13 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- Non deployed yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -203,15 +172,9 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MarcoDDM](https://github.com/MarcoDDM)
+- Twitter: [@twitterhandle](https://twitter.com/nerdpiola)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/marcoalmadaar)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,11 +182,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Adds more queries to improve the management of the database and its data**
+- [ ] **Integrates a back-end component to allow for easier modification and management of the data**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -254,22 +214,6 @@ If you like this project...
 > Give credit to everyone who inspired your codebase.
 
 I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
