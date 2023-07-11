@@ -44,20 +44,6 @@ This repository contains plain SQL files that were used to set up and manage a d
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
@@ -67,8 +53,6 @@ This repository contains plain SQL files that were used to set up and manage a d
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **Description: This update ensures that data is correctly stored in the database and can be interacted with using SQL commands. With this implementation, users can confidently manage and manipulate their data using standard SQL syntax.**
 
