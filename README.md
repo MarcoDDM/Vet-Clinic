@@ -78,7 +78,7 @@ This repository contains plain SQL files that were used to set up and manage a d
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Non deployed yet
+- N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
