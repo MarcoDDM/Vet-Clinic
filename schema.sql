@@ -13,3 +13,23 @@ CREATE TABLE animals (
 
 ALTER TABLE animals ADD COLUMN species TEXT;
 
+/*Add owners, and alter animals*/
+
+CREATE TABLE owners (
+  id SERIAL PRIMARY KEY,
+  full_name TEXT,
+  age INTEGER
+);
+
+CREATE TABLE species (
+  id SERIAL PRIMARY KEY,
+  name TEXT
+);
+
+ALTER TABLE animals
+ADD COLUMN species_id INTEGER,
+ADD COLUMN owner_id INTEGER;
+
+ALTER TABLE animals
+ADD FOREIGN KEY (species_id) REFERENCES species (id),
+ADD FOREIGN KEY (owner_id) REFERENCES owners (id);
