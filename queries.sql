@@ -13,37 +13,75 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 BEGIN;
 UPDATE animals SET species = 'unspecified';
--- Verify that change was made
 SELECT * FROM animals;
 ROLLBACK;
--- Verify that the species columns went back to the state before the transaction
 SELECT * FROM animals;
 
 BEGIN;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
--- Verify that changes were made
 SELECT * FROM animals;
 COMMIT;
--- Verify that changes persist after commit
 SELECT * FROM animals;
 
 BEGIN;
 DELETE FROM animals;
--- Verify that all records were deleted
 SELECT * FROM animals;
 ROLLBACK;
--- Verify that all records still exist after rollback
 SELECT * FROM animals;
 
 BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT my_savepoint;
 UPDATE animals SET weight_kg = weight_kg * -1;
--- Verify that changes were made
 SELECT * FROM animals;
 ROLLBACK TO my_savepoint;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
--- Verify that changes were made
 SELECT * FROM animals;
 COMMIT;
+
+/*Queries for the questions*/
+
+SELECT a.name 
+FROM animals a 
+JOIN owners o 
+ON a.owner_id = o.id 
+WHERE o.full_name = 'Melody Pond';
+
+SELECT a.name 
+FROM animals a 
+JOIN species s 
+ON a.species_id = s.id 
+WHERE s.name = 'Pokemon';
+
+SELECT o.full_name, a.name 
+FROM owners o 
+LEFT JOIN animals a 
+ON o.id = a.owner_id;
+
+SELECT s.name, COUNT(a.id) 
+FROM species s 
+LEFT JOIN animals a 
+ON s.id = a.species_id 
+GROUP BY s.name;
+
+SELECT a.name 
+FROM animals a 
+JOIN species s 
+ON a.species_id = s.id 
+JOIN owners o 
+ON a.owner_id = o.id 
+WHERE s.name = 'Digimon' AND o.full_name = 'Jennifer Orwell';
+
+SELECT a.name 
+FROM animals a 
+JOIN owners o 
+ON a.owner_id = o.id 
+WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
+
+SELECT o.full_name, COUNT(a.id) as animal_count 
+FROM owners o 
+JOIN animals a 
+ON o.id = a.owner_id 
+GROUP BY o.full_name 
+ORDER BY animal_count DESC LIMIT 1;
