@@ -33,3 +33,31 @@ ADD COLUMN owner_id INTEGER;
 ALTER TABLE animals
 ADD FOREIGN KEY (species_id) REFERENCES species (id),
 ADD FOREIGN KEY (owner_id) REFERENCES owners (id);
+
+
+/*Add vets, specialization and visits*/
+
+CREATE TABLE vets (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  age INTEGER,
+  date_of_graduation DATE
+);
+
+CREATE TABLE specializations (
+  vet_id INTEGER,
+  species_id INTEGER,
+  PRIMARY KEY (vet_id, species_id),
+  FOREIGN KEY (vet_id) REFERENCES vets (id),
+  FOREIGN KEY (species_id) REFERENCES species (id)
+);
+
+CREATE TABLE visits (
+  id SERIAL PRIMARY KEY,
+  animal_id INTEGER,
+  vet_id INTEGER,
+  visit_date DATE,
+  FOREIGN KEY (animal_id) REFERENCES animals (id),
+  FOREIGN KEY (vet_id) REFERENCES vets (id)
+);
+
