@@ -61,3 +61,11 @@ CREATE TABLE visits (
   FOREIGN KEY (vet_id) REFERENCES vets (id)
 );
 
+/*Performance audit*/
+
+--Add index visits table on animal_id
+CREATE INDEX idx_visits_animal_id ON visits(animal_id);
+--Add index visits table on vet_id
+CREATE INDEX idx_visits_vet_id ON visits(vet_id);
+--Add index owners email table on species_id
+CREATE INDEX idx_owners_email ON owners(email);
