@@ -24,7 +24,7 @@ CREATE TABLE treatments (
 
 CREATE TABLE invoices(
     id INT GENERATED ALWAYS AS IDENTITY,
-    total_amont DEC(11, 5),
+    total_amount DECIMAL(11, 5),
     generated_at TIMESTAMP,
     payed_at TIMESTAMP,
     medical_histories_id INT,
